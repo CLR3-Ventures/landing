@@ -41,11 +41,11 @@ export default function Home() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 max-w-5xl mx-auto auto-rows-fr">
           {/* Consulting Card */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden h-full flex flex-col">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
-            <div className="relative">
+            <div className="relative flex flex-col h-full">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">Services</div>
                 <div className="w-1 h-1 rounded-full bg-zinc-700" />
@@ -54,7 +54,7 @@ export default function Home() {
               <p className="text-xs text-zinc-400 leading-relaxed mb-3">
                 Strategic advisory and technical execution
               </p>
-              <div className="space-y-1.5 border-t border-white/[0.05] pt-3">
+              <div className="space-y-1.5 border-t border-white/[0.05] pt-3 mt-auto">
                 <div className="flex items-center gap-2">
                   <div className="w-1 h-1 rounded-full bg-zinc-600" />
                   <div className="text-[11px] text-zinc-500">Strategic Advisory</div>
@@ -72,14 +72,14 @@ export default function Home() {
           </Card>
 
           {/* Portfolio Companies - Rotating Cube */}
-          <div className="relative pb-8">
+          <div className="relative h-full pb-8">
             <PortfolioCube companies={portfolioCompanies} />
           </div>
 
           {/* Contact Card */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden h-full flex flex-col">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
-            <div className="relative">
+            <div className="relative flex flex-col h-full">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">Get in Touch</div>
                 <div className="w-1 h-1 rounded-full bg-zinc-700" />
@@ -96,7 +96,7 @@ export default function Home() {
               </a>
               <Button
                 id="open-popup-button"
-                className="w-full bg-white text-black hover:bg-zinc-200 h-8 text-[11px] font-semibold tracking-wide"
+                className="w-full bg-white text-black hover:bg-zinc-200 h-8 text-[11px] font-semibold tracking-wide mt-auto"
               >
                 Send Message
               </Button>
