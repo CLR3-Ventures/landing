@@ -6,7 +6,7 @@ export default function Home() {
   const portfolioCompanies = [
     {
       name: "Nolimitnodes",
-      description: "High-Performance Solana RPC Infrastructure",
+      description: "Ultra-fast Solana RPC infrastructure provider offering unlimited requests, sub-50ms latency, and real-time WebSocket support for DeFi, NFT, and trading applications",
       url: "https://nolimitnodes.com"
     },
     // Add more companies here
