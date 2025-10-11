@@ -30,7 +30,7 @@ export default function Home() {
             of technology
           </h1>
           <p className="text-xs text-zinc-500 max-w-lg mx-auto leading-relaxed">
-            Technology holding company focused on strategic consulting and venture building
+            Technology holding company focused on strategic consulting and venture building.
           </p>
         </div>
 
