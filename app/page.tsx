@@ -9,6 +9,11 @@ export default function Home() {
       description: "Ultra-fast Solana RPC infrastructure provider offering unlimited requests, sub-50ms latency, and real-time WebSocket support for DeFi, NFT, and trading applications",
       url: "https://nolimitnodes.com"
     },
+    {
+      name: "MyBuildGuide",
+      description: "All-in-one construction management platform empowering homeowners to build and renovate with professional-grade tools for project planning, workforce management, budgeting, and legal protection",
+      url: "https://mybuildguide.com"
+    },
     // Add more companies here
   ];
 
