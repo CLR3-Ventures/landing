@@ -72,7 +72,7 @@ export default function Home() {
           </Card>
 
           {/* Portfolio Companies - Rotating Cube */}
-          <div className="relative h-full pb-8">
+          <div className="relative h-full">
             <PortfolioCube companies={portfolioCompanies} />
           </div>
 
