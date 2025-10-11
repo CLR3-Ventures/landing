@@ -6,7 +6,7 @@ export default function Home() {
   const portfolioCompanies = [
     {
       name: "Nolimitnodes",
-      description: "Infrastructure Solutions",
+      description: "High-Performance Solana RPC Infrastructure",
       url: "https://nolimitnodes.com"
     },
     // Add more companies here
