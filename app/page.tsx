@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PortfolioCube } from "@/components/portfolio-cube";
+import { ConstellationBackground } from "@/components/constellation-background";
 
 export default function Home() {
   // Portfolio companies - easily extensible
@@ -19,11 +20,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen bg-black flex items-center justify-center p-4 overflow-hidden relative">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+    <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-x-hidden">
+      {/* Constellation background */}
+      <ConstellationBackground />
 
-      <div className="w-full max-w-6xl relative z-10">
+      <div className="w-full max-w-6xl relative z-10 py-8 md:py-0">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-4">
