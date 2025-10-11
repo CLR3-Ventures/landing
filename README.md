@@ -8,7 +8,7 @@
 
 ## 🌐 Live Site
 
-**[https://clr3-ventures.github.io/landing](https://clr3-ventures.github.io/landing)**
+**[https://clr3.org](https://clr3.org)**
 
 ## 🚀 About
 
