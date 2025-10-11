@@ -12,7 +12,7 @@ export default function Home() {
     },
     {
       name: "MyBuildGuide",
-      description: "All-in-one construction management platform empowering homeowners to build and renovate with professional-grade tools for project planning, workforce management, budgeting, and legal protection",
+      description: "Construction management platform for homeowners with tools for project planning, budgeting, and workforce coordination",
       url: "https://mybuildguide.com"
     },
     // Add more companies here

@@ -61,12 +61,13 @@ export function PortfolioCube({ companies }: PortfolioCubeProps) {
           style={{
             position: "absolute",
             width: "100%",
+            height: "100%",
             transformStyle: "preserve-3d",
           }}
         >
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden h-full flex flex-col">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
-            <div className="relative">
+            <div className="relative flex flex-col h-full">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
                   Portfolio
@@ -76,50 +77,36 @@ export function PortfolioCube({ companies }: PortfolioCubeProps) {
               <h3 className="text-base font-semibold text-white mb-2">
                 {company.name}
               </h3>
-              <p className="text-xs text-zinc-400 mb-4 min-h-[60px]">
+              <p className="text-xs text-zinc-400 leading-relaxed mb-3">
                 {company.description}
               </p>
-              <a
-                href={company.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[11px] text-white/80 hover:text-white transition-colors border border-white/[0.08] hover:border-white/[0.15] px-3 py-1.5 rounded-md"
-              >
-                Visit
-                <svg
-                  className="w-2.5 h-2.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="mt-auto">
+                <a
+                  href={company.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[11px] text-white/80 hover:text-white transition-colors border border-white/[0.08] hover:border-white/[0.15] px-3 py-1.5 rounded-md"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
+                  Visit
+                  <svg
+                    className="w-2.5 h-2.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </Card>
         </motion.div>
       </AnimatePresence>
-
-      {/* Indicator Dots */}
-      <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-1.5">
-        {companies.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-1.5 h-1.5 rounded-full transition-all ${
-              index === currentIndex
-                ? "bg-white w-4"
-                : "bg-zinc-700 hover:bg-zinc-600"
-            }`}
-            aria-label={`Go to ${companies[index].name}`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
