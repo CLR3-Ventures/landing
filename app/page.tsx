@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { PortfolioCube } from "@/components/portfolio-cube";
 
 export default function Home() {
   // Portfolio companies - easily extensible
@@ -70,36 +71,10 @@ export default function Home() {
             </div>
           </Card>
 
-          {/* Portfolio Companies - Dynamic */}
-          {portfolioCompanies.map((company, index) => (
-            <Card
-              key={index}
-              className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
-              <div className="relative">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">Portfolio</div>
-                  <div className="w-1 h-1 rounded-full bg-zinc-700" />
-                </div>
-                <h3 className="text-base font-semibold text-white mb-2">{company.name}</h3>
-                <p className="text-xs text-zinc-400 mb-4">
-                  {company.description}
-                </p>
-                <a
-                  href={company.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[11px] text-white/80 hover:text-white transition-colors border border-white/[0.08] hover:border-white/[0.15] px-3 py-1.5 rounded-md"
-                >
-                  Visit
-                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </Card>
-          ))}
+          {/* Portfolio Companies - Rotating Cube */}
+          <div className="relative pb-8">
+            <PortfolioCube companies={portfolioCompanies} />
+          </div>
 
           {/* Contact Card */}
           <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all group relative overflow-hidden">
