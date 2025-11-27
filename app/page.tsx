@@ -12,6 +12,16 @@ export default function Home() {
       url: "https://nolimitnodes.com"
     },
     {
+      name: "Cloak Labs AI",
+      description: "Predictive microstructure modeling for low-cap DEX assets, built from the behavioral profiles of known on-chain participants.",
+      url: "https://nolimitnodes.com"
+    },
+    {
+      name: "Intelligence Labs AI",
+      description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior—so you can trade with unprecedented informational advantage.",
+      url: "https://nolimitnodes.com"
+    },
+    {
       name: "MyBuildGuide",
       description: "Construction management platform for homeowners with tools for project planning, budgeting, and workforce coordination",
       url: "https://mybuildguide.com"
