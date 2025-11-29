@@ -18,7 +18,7 @@ export default function Home() {
     },
     {
       name: "Intelligence Labs AI",
-      description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior—so you can trade with unprecedented informational advantage.",
+      description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior for trading alpha.",
       url: "https://nolimitnodes.com"
     },
     {
