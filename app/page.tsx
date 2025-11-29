@@ -20,12 +20,7 @@ export default function Home() {
       name: "Intelligence Labs AI",
       description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior for trading alpha.",
       url: "https://nolimitnodes.com"
-    },
-    {
-      name: "MyBuildGuide",
-      description: "Construction management platform for homeowners with tools for project planning, budgeting, and workforce coordination",
-      url: "https://mybuildguide.com"
-    },
+    }
     // Add more companies here
   ];
 
