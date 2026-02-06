@@ -9,14 +9,17 @@ export default function Home() {
     {
       name: "MBG",
       description: "Helping homeowners and builders build homes and renovate",
+      url: ""
     },
     {
       name: "Cloak Labs AI",
       description: "Predictive microstructure modeling for low-cap DEX assets, built from the behavioral profiles of known on-chain participants.",
+      url: ""
     },
     {
       name: "Intelligence Labs AI",
       description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior for trading alpha.",
+      url: ""
     }
     // Add more companies here
   ];
