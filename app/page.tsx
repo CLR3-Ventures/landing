@@ -7,19 +7,16 @@ export default function Home() {
   // Portfolio companies - easily extensible
   const portfolioCompanies = [
     {
-      name: "Nolimitnodes",
-      description: "Ultra-fast Solana RPC infrastructure provider offering unlimited requests, sub-50ms latency, and real-time WebSocket support for DeFi, NFT, and trading applications",
-      url: "https://nolimitnodes.com"
+      name: "MBG",
+      description: "Helping homeowners and builders build homes and renovate",
     },
     {
       name: "Cloak Labs AI",
       description: "Predictive microstructure modeling for low-cap DEX assets, built from the behavioral profiles of known on-chain participants.",
-      url: "https://nolimitnodes.com"
     },
     {
       name: "Intelligence Labs AI",
       description: "A cross-chain intelligence engine that tracks every wallet, contract, and program to model insider-grade behavior for trading alpha.",
-      url: "https://nolimitnodes.com"
     }
     // Add more companies here
   ];
