@@ -53,12 +53,12 @@ export default function BackendEngineerPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black flex items-start justify-center p-4 relative overflow-x-hidden">
+    <div className="min-h-screen bg-black flex items-start justify-center p-4 sm:p-6 relative overflow-x-hidden">
       <ConstellationBackground />
 
       <div className="w-full max-w-4xl relative z-10 py-12 md:py-16">
         {/* Header */}
-        <div className="mb-10">
+        <div className="mb-12">
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             <span className="text-xs text-zinc-500 uppercase tracking-widest font-medium">
@@ -66,22 +66,22 @@ export default function BackendEngineerPage() {
             </span>
           </div>
 
-          <h1 className="text-3xl lg:text-4xl font-semibold tracking-tight text-white mb-3 leading-tight">
+          <h1 className="text-3xl lg:text-5xl font-semibold tracking-tight text-white mb-4 leading-tight">
             Backend Software Engineer
           </h1>
 
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="inline-flex items-center gap-1.5 text-[11px] text-zinc-400 border border-white/[0.08] rounded-md px-2.5 py-1">
-              <span className="w-1 h-1 rounded-full bg-zinc-500" />
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="inline-flex items-center gap-2 text-xs text-zinc-400 border border-white/[0.08] rounded-md px-3 py-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-zinc-500" />
               Bangalore, India
             </span>
-            <span className="inline-flex items-center gap-1.5 text-[11px] text-zinc-400 border border-white/[0.08] rounded-md px-2.5 py-1">
-              <span className="w-1 h-1 rounded-full bg-zinc-500" />
+            <span className="inline-flex items-center gap-2 text-xs text-zinc-400 border border-white/[0.08] rounded-md px-3 py-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-zinc-500" />
               Full-time, On-site
             </span>
           </div>
 
-          <p className="text-xs text-zinc-500 max-w-2xl leading-relaxed">
+          <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
             We are looking for a highly skilled Software Engineer who combines
             deep technical expertise with strong leadership instincts. This role
             is for a true self-starter — someone who thrives in fast-moving
@@ -91,21 +91,21 @@ export default function BackendEngineerPage() {
         </div>
 
         {/* Content Grid */}
-        <div className="space-y-2.5">
+        <div className="space-y-3">
           {/* About the Role */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
             <div className="relative">
-              <div className="flex items-center justify-between mb-3">
-                <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-xs text-zinc-600 uppercase tracking-widest font-medium">
                   Overview
                 </div>
                 <div className="w-1 h-1 rounded-full bg-zinc-700" />
               </div>
-              <h2 className="text-base font-semibold text-white mb-2">
+              <h2 className="text-lg font-semibold text-white mb-3">
                 About the Role
               </h2>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 This role is ideal for someone who is hands-on with coding,
                 capable of architecting complex systems, and comfortable leading
                 independent initiatives from concept to production. You will
@@ -116,23 +116,23 @@ export default function BackendEngineerPage() {
           </Card>
 
           {/* Responsibilities */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
             <div className="relative">
-              <div className="flex items-center justify-between mb-3">
-                <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-xs text-zinc-600 uppercase tracking-widest font-medium">
                   What You&apos;ll Do
                 </div>
                 <div className="w-1 h-1 rounded-full bg-zinc-700" />
               </div>
-              <h2 className="text-base font-semibold text-white mb-3">
+              <h2 className="text-lg font-semibold text-white mb-4">
                 Key Responsibilities
               </h2>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {responsibilities.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <div className="w-1 h-1 rounded-full bg-zinc-600 mt-1.5 shrink-0" />
-                    <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 shrink-0" />
+                    <p className="text-sm text-zinc-400 leading-relaxed">
                       {item}
                     </p>
                   </div>
@@ -142,25 +142,25 @@ export default function BackendEngineerPage() {
           </Card>
 
           {/* Two-column: Required + Preferred */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* Required Qualifications */}
-            <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+            <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
               <div className="relative">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-xs text-zinc-600 uppercase tracking-widest font-medium">
                     Requirements
                   </div>
                   <div className="w-1 h-1 rounded-full bg-zinc-700" />
                 </div>
-                <h2 className="text-base font-semibold text-white mb-3">
+                <h2 className="text-lg font-semibold text-white mb-4">
                   Required Qualifications
                 </h2>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {requiredQualifications.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="w-1 h-1 rounded-full bg-zinc-600 mt-1.5 shrink-0" />
-                      <p className="text-[11px] text-zinc-400 leading-relaxed">
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 shrink-0" />
+                      <p className="text-sm text-zinc-400 leading-relaxed">
                         {item}
                       </p>
                     </div>
@@ -170,23 +170,23 @@ export default function BackendEngineerPage() {
             </Card>
 
             {/* Preferred Qualifications */}
-            <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+            <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
               <div className="relative">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-xs text-zinc-600 uppercase tracking-widest font-medium">
                     Nice to Have
                   </div>
                   <div className="w-1 h-1 rounded-full bg-zinc-700" />
                 </div>
-                <h2 className="text-base font-semibold text-white mb-3">
+                <h2 className="text-lg font-semibold text-white mb-4">
                   Preferred Qualifications
                 </h2>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {preferredQualifications.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="w-1 h-1 rounded-full bg-zinc-600 mt-1.5 shrink-0" />
-                      <p className="text-[11px] text-zinc-400 leading-relaxed">
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 shrink-0" />
+                      <p className="text-sm text-zinc-400 leading-relaxed">
                         {item}
                       </p>
                     </div>
@@ -197,23 +197,23 @@ export default function BackendEngineerPage() {
           </div>
 
           {/* Who You Are */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
             <div className="relative">
-              <div className="flex items-center justify-between mb-3">
-                <div className="text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-xs text-zinc-600 uppercase tracking-widest font-medium">
                   Culture Fit
                 </div>
                 <div className="w-1 h-1 rounded-full bg-zinc-700" />
               </div>
-              <h2 className="text-base font-semibold text-white mb-3">
+              <h2 className="text-lg font-semibold text-white mb-4">
                 Who You Are
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                 {whoYouAre.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <div className="w-1 h-1 rounded-full bg-zinc-600 mt-1.5 shrink-0" />
-                    <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 shrink-0" />
+                    <p className="text-sm text-zinc-400 leading-relaxed">
                       {item}
                     </p>
                   </div>
@@ -223,20 +223,20 @@ export default function BackendEngineerPage() {
           </Card>
 
           {/* Apply CTA */}
-          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-5 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
+          <Card className="border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-6 hover:bg-white/[0.04] hover:border-white/[0.12] transition-all relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/[0.03] to-transparent rounded-full blur-2xl" />
             <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h2 className="text-base font-semibold text-white mb-1">
+                <h2 className="text-lg font-semibold text-white mb-1">
                   Interested?
                 </h2>
-                <p className="text-[11px] text-zinc-500 leading-relaxed">
+                <p className="text-sm text-zinc-500 leading-relaxed">
                   Send your resume and a brief note about why you&apos;re
                   excited about this role.
                 </p>
               </div>
               <a href="mailto:careers@clr3.org?subject=Application%20-%20Backend%20Software%20Engineer">
-                <Button className="bg-white text-black hover:bg-zinc-200 h-8 text-[11px] font-semibold tracking-wide px-6 shrink-0">
+                <Button className="bg-white text-black hover:bg-zinc-200 h-9 text-xs font-semibold tracking-wide px-6 shrink-0">
                   Apply Now
                 </Button>
               </a>
@@ -245,8 +245,8 @@ export default function BackendEngineerPage() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8">
-          <p className="text-[10px] text-zinc-700 tracking-wider">
+        <div className="text-center mt-10">
+          <p className="text-xs text-zinc-700 tracking-wider">
             &copy; 2025 CLR3 Ventures
           </p>
         </div>
