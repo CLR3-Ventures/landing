@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ConstellationBackground } from "@/components/constellation-background";
 
 export const metadata: Metadata = {
-  title: "Backend Software Engineer - CLR3 Ventures",
+  title: "Software Engineer (Backend) - CLR3 Ventures",
   description:
-    "Join CLR3 Ventures as a Backend Software Engineer. Bangalore office, hands-on development, system architecture, and technical leadership.",
+    "Join CLR3 Ventures as a Backend Software Engineer. Bangalore office, hands-on development, APIs, and backend systems.",
   robots: {
     index: false,
     follow: false,
@@ -15,41 +15,37 @@ export const metadata: Metadata = {
 
 export default function BackendEngineerPage() {
   const responsibilities = [
-    "Hands-on development — design, code, test, deploy, and maintain high-quality software in any object-oriented backend language",
-    "Architect scalable, robust, and secure systems including APIs, distributed systems, data pipelines, and cloud-native services",
-    "Lead independent technical initiatives with minimal oversight; drive projects from idea to production",
-    "Mentor and guide junior and mid-level engineers through code reviews, best practices, and technical direction",
-    "Collaborate with product and leadership to translate business requirements into technical solutions",
-    "Identify and implement improvements in performance, scalability, reliability, and developer productivity",
-    "Own technical decisions, propose solution options, and evaluate trade-offs",
-    "Champion engineering best practices including automated testing, CI/CD, clean code, and documentation",
-    "Troubleshoot complex issues and improve system observability, monitoring, and incident response",
+    "Write, test, and deploy backend code in object-oriented languages",
+    "Build and maintain APIs, services, and data pipelines",
+    "Work on system design and help improve the architecture as things evolve",
+    "Collaborate with teammates to break down requirements and deliver solutions",
+    "Participate in code reviews and contribute to engineering best practices",
+    "Debug and troubleshoot issues across the stack",
+    "Help improve performance, reliability, and developer tooling",
+    "Write clean, well-documented code that others can build on",
   ];
 
   const requiredQualifications = [
-    "2+ years of professional software engineering experience (including internships and personal projects) with a strong portfolio of shipped projects",
-    "Deep hands-on programming skills — language-agnostic, comfortable picking up new languages quickly",
-    "Experience architecting and building distributed systems, microservices, or high-scale applications",
-    "Strong understanding of data structures, algorithms, system design, and performance optimization",
-    "Experience with modern cloud infrastructure (AWS, GCP, Azure) and container technologies (Docker, Kubernetes)",
-    "Proven ability to lead technical initiatives independently",
-    "Excellent communication and collaborative problem-solving skills",
+    "Solid programming skills in at least one backend language \u2014 and willingness to pick up new ones",
+    "Familiarity with building APIs, working with databases, and writing tests",
+    "Basic understanding of data structures, algorithms, and system design",
+    "Good communication skills and comfort working in a team",
   ];
 
   const preferredQualifications = [
-    "Experience working with high-throughput, real-time, or event-driven systems",
-    "Familiarity with DevOps, SRE practices, and CI/CD pipelines",
-    "Experience guiding small teams or leading architecture and design reviews",
-    "Contributions to open-source projects or technical blogs",
-    "Experience with distributed messaging systems (Kafka, NATS, Redpanda, Pulsar, etc.)",
+    "Experience with distributed or event-driven systems",
+    "Familiarity with CI/CD pipelines and DevOps practices",
+    "Experience with messaging systems like Kafka, NATS, or Redpanda",
+    "Contributions to open-source projects or a technical blog",
+    "Interest in real-time data or high-throughput systems",
   ];
 
   const whoYouAre = [
-    "A self-motivated builder who thrives in ownership and autonomy",
-    "A pragmatic engineer who balances ideal architecture with real-world constraints",
-    "A mentor who enjoys uplifting others and sharing knowledge",
-    "A problem-solver who doesn\u2019t wait for instructions \u2014 you propose solutions",
-    "A generalist who cares more about solving problems than what language is used",
+    "You like building things and seeing them work",
+    "You\u2019re comfortable asking questions and learning on the go",
+    "You take ownership of your work without needing to be told what to do",
+    "You care more about solving the problem than which language you use",
+    "You\u2019re a team player who shares what you know",
   ];
 
   return (
@@ -67,7 +63,7 @@ export default function BackendEngineerPage() {
           </div>
 
           <h1 className="text-3xl lg:text-5xl font-semibold tracking-tight text-white mb-4 leading-tight">
-            Backend Software Engineer
+            Software Engineer &mdash; Backend
           </h1>
 
           <div className="flex flex-wrap items-center gap-3 mb-5">
@@ -82,11 +78,11 @@ export default function BackendEngineerPage() {
           </div>
 
           <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
-            We are looking for a highly skilled Software Engineer who combines
-            deep technical expertise with strong leadership instincts. This role
-            is for a true self-starter — someone who thrives in fast-moving
-            environments, is language-agnostic, and is motivated by solving
-            challenging engineering problems end-to-end.
+            We&apos;re looking for a Software Engineer to join our backend team.
+            You&apos;ll work on real systems that power our products &mdash;
+            writing code, building APIs, and helping shape how things work under
+            the hood. If you enjoy solving problems, learning new tools, and
+            writing clean code, this is a great fit.
           </p>
         </div>
 
@@ -106,11 +102,12 @@ export default function BackendEngineerPage() {
                 About the Role
               </h2>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                This role is ideal for someone who is hands-on with coding,
-                capable of architecting complex systems, and comfortable leading
-                independent initiatives from concept to production. You will
-                mentor junior engineers, influence technical decisions across the
-                team, and drive high-impact projects with minimal supervision.
+                This is a hands-on engineering role. You&apos;ll be writing
+                backend code, working with databases and APIs, and collaborating
+                with the rest of the team to ship features and fix bugs. We
+                value curiosity and initiative &mdash; you don&apos;t need to
+                know everything on day one, but you should be eager to learn and
+                grow.
               </p>
             </div>
           </Card>
@@ -231,11 +228,11 @@ export default function BackendEngineerPage() {
                   Interested?
                 </h2>
                 <p className="text-sm text-zinc-500 leading-relaxed">
-                  Send your resume and a brief note about why you&apos;re
-                  excited about this role.
+                  Send your resume and a short note about what excites you about
+                  this role.
                 </p>
               </div>
-              <a href="mailto:careers@clr3.org?subject=Application%20-%20Backend%20Software%20Engineer">
+              <a href="mailto:careers@clr3.org?subject=Application%20-%20Software%20Engineer%20(Backend)">
                 <Button className="bg-white text-black hover:bg-zinc-200 h-9 text-xs font-semibold tracking-wide px-6 shrink-0">
                   Apply Now
                 </Button>
