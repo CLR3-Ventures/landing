@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CLR3 Ventures - Technology Holding & Consulting",
-  description: "Building Tomorrow's Technology Giants. Strategic consulting and technology holdings.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} — ${site.tagline}`,
+    template: `%s — ${site.name}`,
+  },
+  description: site.description,
+  openGraph: {
+    type: "website",
+    url: site.url,
+    siteName: site.legalName,
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+  },
+  twitter: {
+    card: "summary",
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+  },
+  alternates: { canonical: site.url },
 };
 
 export default function RootLayout({
@@ -26,12 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}
 
-        {/* NeetoForm Scripts */}
+        {/* NeetoForm contact popup */}
         <Script id="neetoform-init" strategy="afterInteractive">
           {`window.neetoForm = window.neetoForm || { embed: function(){(neetoForm.q=neetoForm.q||[]).push(arguments)} };`}
         </Script>

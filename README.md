@@ -1,6 +1,6 @@
 # CLR3 Ventures Landing Page
 
-> Official landing page for CLR3 Ventures - Technology Holding & Consulting
+> Official landing page for CLR3 — software consulting, advisory and product development
 
 [![Deploy to GitHub Pages](https://github.com/CLR3-Ventures/landing/actions/workflows/deploy.yml/badge.svg)](https://github.com/CLR3-Ventures/landing/actions/workflows/deploy.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?logo=next.js)](https://nextjs.org/)
@@ -12,15 +12,15 @@
 
 ## 🚀 About
 
-CLR3 Ventures is a technology holding company focused on strategic consulting and venture building. This landing page showcases our services, portfolio companies, and provides a contact point for potential collaborations.
+CLR3 is a software consulting, advisory and product development company. This landing page presents our services, the products we build and operate (eeze.xyz, nolimitnodes.com, datastore.sh, hyperliquidrpc.com, openinfra.sh), how an engagement runs, and a contact point.
 
 ## ✨ Features
 
-- **Modern Design** - Clean, professional bento grid layout
+- **Modern Design** - Enterprise dark theme with a typographic hero and structured sections
 - **Responsive** - Optimized for all screen sizes
 - **Dark Theme** - Sophisticated dark mode interface
 - **Contact Integration** - NeetoForm popup for inquiries
-- **Portfolio Showcase** - Extensible company portfolio section
+- **Products** - Ledger-style list of products CLR3 builds and operates
 - **Performance** - Static site generation for optimal speed
 
 ## 🛠️ Tech Stack
@@ -74,14 +74,20 @@ The workflow:
 landing/
 ├── app/
 │   ├── icon.tsx          # Custom CLR3 favicon
-│   ├── layout.tsx        # Root layout with NeetoForm scripts
-│   ├── page.tsx          # Main landing page
-│   └── globals.css       # Global styles
+│   ├── layout.tsx        # Root layout, metadata, NeetoForm scripts
+│   ├── page.tsx          # Landing page composition
+│   ├── globals.css       # Design tokens and global styles
+│   └── careers/          # Job postings
 ├── components/
+│   ├── sections/         # Hero, Services, Products, Approach, Contact, Footer
+│   ├── site-nav.tsx      # Sticky navigation with mobile menu
+│   ├── product-mark.tsx  # Drawn glyphs for each product
+│   ├── logo.tsx          # CLR3 wordmark
 │   └── ui/               # shadcn/ui components
 ├── lib/
+│   ├── site.ts           # All site copy: products, services, approach
 │   └── utils.ts          # Utility functions
-├── public/               # Static assets
+├── public/               # Static assets, CNAME
 └── .github/
     └── workflows/
         └── deploy.yml    # GitHub Pages deployment workflow
@@ -89,30 +95,27 @@ landing/
 
 ## 🎨 Customization
 
-### Adding Portfolio Companies
-
-Edit the `portfolioCompanies` array in `app/page.tsx`:
+All copy lives in `lib/site.ts`. To add or edit a product, change the `products` array:
 
 ```typescript
-const portfolioCompanies = [
+export const products: Product[] = [
   {
-    name: "Company Name",
-    description: "Company Description",
-    url: "https://company.com"
+    name: "Product",
+    domain: "product.com",
+    url: "https://product.com",
+    summary: "One-line positioning.",
+    detail: "A short paragraph on what it does and for whom.",
+    tags: ["Tag"],
+    mark: "eeze", // one of the glyphs in components/product-mark.tsx
   },
-  // Add more companies here
 ];
 ```
 
-### Updating Contact Information
-
-The contact email and form configuration can be updated in:
-- Email link: `app/page.tsx`
-- NeetoForm config: `app/layout.tsx`
+Services, engagement phases and principles are edited in the same file. The contact form configuration is in `app/layout.tsx`.
 
 ## 📄 License
 
-Copyright © 2025 CLR3 Ventures. All rights reserved.
+Copyright © 2026 CLR3 Ventures. All rights reserved.
 
 ## 📧 Contact
 
@@ -120,4 +123,4 @@ For inquiries, reach out at [hello@clr3.org](mailto:hello@clr3.org)
 
 ---
 
-**CLR3 Ventures** - Building the future of technology
+**CLR3** — Software consulting, advisory and product development
