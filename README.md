@@ -16,9 +16,9 @@ CLR3 is a software consulting, advisory and product development company. This la
 
 ## ✨ Features
 
-- **Modern Design** - Enterprise dark theme with a typographic hero and structured sections
+- **Modern Design** - Flat enterprise system: solid surfaces, 1px rules, one accent, no gradients or shadows
 - **Responsive** - Optimized for all screen sizes
-- **Dark Theme** - Sophisticated dark mode interface
+- **Light, flat theme** - Dark band reserved for the contact section
 - **Contact Integration** - NeetoForm popup for inquiries
 - **Products** - Ledger-style list of products CLR3 builds and operates
 - **Performance** - Static site generation for optimal speed

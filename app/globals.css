@@ -11,10 +11,15 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-signal: var(--signal);
+  --color-signal-strong: var(--signal-strong);
   --color-signal-soft: var(--signal-soft);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-ink-faint: var(--ink-faint);
+  --color-band: var(--band);
+  --color-band-foreground: var(--band-foreground);
+  --color-band-muted: var(--band-muted);
+  --color-band-line: var(--band-line);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-ring: var(--ring);
@@ -33,48 +38,55 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-sm: calc(var(--radius) - 1px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /*
-  CLR3 palette. The site ships dark only: it is read by engineers and
-  operators at a desk, and its products live in terminals and dashboards.
+  CLR3 palette — flat enterprise system.
+  Solid surfaces, 1px rules, no shadows, no gradients, no blur.
+  One accent (navy blue) for actions and signal; everything else is ink on paper.
 */
-:root,
-.dark {
-  --radius: 0.5rem;
+:root {
+  --radius: 2px;
 
-  --background: oklch(0.14 0.008 260);
-  --foreground: oklch(0.97 0.004 260);
-  --surface: oklch(0.17 0.008 260);
-  --surface-raised: oklch(0.205 0.009 260);
-  --line: oklch(1 0 0 / 9%);
-  --line-strong: oklch(1 0 0 / 16%);
+  --background: #ffffff;
+  --foreground: #111318;
+  --surface: #f5f6f8;
+  --surface-raised: #eceef1;
+  --line: #e1e4e8;
+  --line-strong: #c4c9d0;
 
-  --ink: oklch(0.97 0.004 260);
-  --ink-muted: oklch(0.74 0.01 260);
-  --ink-faint: oklch(0.58 0.012 260);
+  --ink: #111318;
+  --ink-muted: #4b525c;
+  --ink-faint: #6f7680;
 
-  --signal: oklch(0.82 0.12 205);
-  --signal-soft: oklch(0.82 0.12 205 / 14%);
+  --signal: #1d4ed8;
+  --signal-strong: #1e40af;
+  --signal-soft: #e8eefc;
 
-  --card: var(--surface);
+  /* Dark band used for the contact section */
+  --band: #111318;
+  --band-foreground: #ffffff;
+  --band-muted: #b3b8c2;
+  --band-line: #2b2f37;
+
+  --card: var(--background);
   --card-foreground: var(--foreground);
-  --popover: var(--surface-raised);
+  --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: oklch(0.97 0.004 260);
-  --primary-foreground: oklch(0.14 0.008 260);
-  --secondary: var(--surface-raised);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface);
   --secondary-foreground: var(--foreground);
-  --muted: var(--surface-raised);
+  --muted: var(--surface);
   --muted-foreground: var(--ink-muted);
-  --accent: var(--surface-raised);
+  --accent: var(--surface);
   --accent-foreground: var(--foreground);
-  --destructive: oklch(0.704 0.191 22.216);
+  --destructive: #b91c1c;
   --border: var(--line);
   --input: var(--line-strong);
   --ring: var(--signal);
@@ -86,7 +98,7 @@
   }
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     @apply bg-background text-foreground;
@@ -95,11 +107,11 @@
   }
   ::selection {
     background: var(--signal);
-    color: var(--background);
+    color: #ffffff;
   }
   :focus-visible {
     outline: 2px solid var(--signal);
-    outline-offset: 3px;
+    outline-offset: 2px;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -120,38 +132,20 @@
   text-wrap: pretty;
 }
 
-/* Fine engineering grid used behind the hero. Masked so it fades away. */
-@utility bg-grid {
-  background-image:
-    linear-gradient(to right, oklch(1 0 0 / 5%) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(1 0 0 / 5%) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-@utility mask-fade-b {
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-}
-
-@utility mask-fade-radial {
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 100%);
-}
-
-/* One authored entrance, used only in the hero. */
+/* One authored entrance, used only in the hero. Flat: opacity + position only. */
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(14px);
-    filter: blur(6px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
 @utility animate-rise {
-  animation: rise 0.9s var(--ease-out-expo) both;
+  animation: rise 0.7s var(--ease-out-expo) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

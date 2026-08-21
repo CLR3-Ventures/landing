@@ -1,13 +1,12 @@
-import { Check } from "lucide-react";
 import { services } from "@/lib/site";
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-20 border-t border-line py-24 sm:py-32">
+    <section id="services" className="scroll-mt-16 border-b border-line py-24 sm:py-32">
       <div className="container-x">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <h2 className="text-balance text-3xl font-semibold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl">
               Three ways to work with us
             </h2>
             <p className="mt-5 text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -22,10 +21,10 @@ export function Services() {
               {services.map((s) => (
                 <article
                   key={s.title}
-                  className="grid gap-6 py-10 first:pt-8 last:pb-8 md:grid-cols-[minmax(0,1fr)_240px] md:gap-12"
+                  className="grid gap-6 py-10 md:grid-cols-[minmax(0,1fr)_240px] md:gap-12"
                 >
                   <div>
-                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-foreground">
+                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-ink">
                       {s.title}
                     </h3>
                     <p className="mt-3 text-pretty text-base font-medium leading-relaxed text-ink">
@@ -35,11 +34,10 @@ export function Services() {
                       {s.body}
                     </p>
                   </div>
-                  <ul className="space-y-2.5 md:pt-1">
+                  <ul className="divide-y divide-line border-y border-line md:mt-1">
                     {s.engagements.map((e) => (
-                      <li key={e} className="flex items-start gap-2.5 text-sm text-ink-muted">
-                        <Check className="mt-0.5 size-4 shrink-0 text-signal" aria-hidden="true" />
-                        <span>{e}</span>
+                      <li key={e} className="py-2.5 text-sm text-ink-muted">
+                        {e}
                       </li>
                     ))}
                   </ul>

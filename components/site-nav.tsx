@@ -15,14 +15,6 @@ const links = [
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -36,25 +28,18 @@ export function SiteNav() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300",
-        scrolled || open
-          ? "border-b border-line bg-background/80 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
-      )}
-    >
+    <header className="sticky top-0 z-50 border-b border-line bg-background">
       <nav className="container-x flex h-16 items-center justify-between" aria-label="Primary">
-        <Link href="/" className="rounded-sm" aria-label="CLR3 home">
+        <Link href="/" aria-label="CLR3 home">
           <Logo />
         </Link>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="rounded-md px-3 py-2 text-sm text-ink-muted transition-colors hover:text-foreground"
+                className="text-sm font-medium text-ink-muted transition-colors hover:text-ink"
               >
                 {l.label}
               </Link>
@@ -62,10 +47,10 @@ export function SiteNav() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden md:flex">
           <a
             href="#contact"
-            className="inline-flex h-9 items-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+            className="inline-flex h-10 items-center bg-signal px-5 text-sm font-medium text-white transition-colors hover:bg-signal-strong"
           >
             Talk to us
           </a>
@@ -77,27 +62,20 @@ export function SiteNav() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="inline-flex size-10 items-center justify-center rounded-md text-foreground md:hidden"
+          className="inline-flex size-10 items-center justify-center text-ink md:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      <div
-        id="mobile-menu"
-        className={cn(
-          "md:hidden",
-          open ? "block" : "hidden"
-        )}
-      >
-        <div className="container-x flex flex-col gap-1 border-t border-line py-4">
+      <div id="mobile-menu" className={cn("md:hidden", open ? "block" : "hidden")}>
+        <div className="container-x flex flex-col border-t border-line py-2">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-3 text-base text-ink-muted transition-colors hover:bg-surface-raised hover:text-foreground"
+              className="border-b border-line py-3.5 text-base font-medium text-ink"
             >
               {l.label}
             </Link>
@@ -105,7 +83,7 @@ export function SiteNav() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex h-11 items-center justify-center rounded-md bg-foreground px-4 text-base font-medium text-background"
+            className="mt-4 mb-2 inline-flex h-12 items-center justify-center bg-signal px-4 text-base font-medium text-white"
           >
             Talk to us
           </a>

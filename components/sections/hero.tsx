@@ -2,23 +2,24 @@ import { ArrowRight } from "lucide-react";
 import { products } from "@/lib/site";
 import { ProductMark } from "@/components/product-mark";
 
+const capabilities = [
+  "Software consulting",
+  "Technical advisory",
+  "Product development",
+  "Managed operations",
+];
+
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
-      {/* Engineering grid + single cool glow, masked so it dissolves into the page */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid mask-fade-radial" />
-        <div className="absolute left-1/2 top-0 h-[520px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/10 blur-[140px]" />
-      </div>
-
-      <div className="container-x">
-        <div className="max-w-4xl">
-          <h1 className="animate-rise text-balance text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] text-foreground sm:text-6xl lg:text-7xl">
+    <section className="border-b border-line">
+      <div className="container-x grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16 lg:py-32">
+        <div className="lg:col-span-8">
+          <h1 className="animate-rise text-balance text-[2.625rem] font-semibold leading-[1.04] tracking-[-0.03em] text-ink sm:text-6xl lg:text-[4.25rem]">
             We build and run the software your business depends on.
           </h1>
           <p
             className="animate-rise mt-7 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted sm:text-xl"
-            style={{ animationDelay: "120ms" }}
+            style={{ animationDelay: "100ms" }}
           >
             CLR3 is a software consulting, advisory and product development
             company. We design, build and operate production systems for our
@@ -26,45 +27,62 @@ export function Hero() {
           </p>
           <div
             className="animate-rise mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
-            style={{ animationDelay: "220ms" }}
+            style={{ animationDelay: "180ms" }}
           >
             <a
               href="#contact"
-              className="group inline-flex h-12 items-center justify-center gap-2 rounded-md bg-foreground px-6 text-[15px] font-medium text-background transition-colors hover:bg-foreground/90"
+              className="group inline-flex h-12 items-center justify-center gap-2 bg-signal px-6 text-[15px] font-medium text-white transition-colors hover:bg-signal-strong"
             >
               Start a conversation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#products"
-              className="inline-flex h-12 items-center justify-center rounded-md border border-line-strong px-6 text-[15px] font-medium text-foreground transition-colors hover:border-foreground/40 hover:bg-surface"
+              className="inline-flex h-12 items-center justify-center border border-line-strong px-6 text-[15px] font-medium text-ink transition-colors hover:border-ink"
             >
               See what we operate
             </a>
           </div>
         </div>
 
-        {/* Proof strip: products we build and run */}
+        {/* Flat capability index — a table, not a card */}
         <div
-          className="animate-rise mt-20 border-t border-line pt-8 sm:mt-28"
-          style={{ animationDelay: "340ms" }}
+          className="animate-rise lg:col-span-4 lg:border-l lg:border-line lg:pl-10"
+          style={{ animationDelay: "260ms" }}
         >
-          <p className="text-sm text-ink-faint">
-            Products designed, built and operated by CLR3
+          <p className="text-sm font-medium text-ink">What we do</p>
+          <ul className="mt-4 divide-y divide-line border-y border-line">
+            {capabilities.map((c) => (
+              <li key={c} className="flex items-center justify-between py-3.5 text-[15px] text-ink-muted">
+                {c}
+                <span className="size-1.5 bg-signal" aria-hidden="true" />
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm leading-relaxed text-ink-faint">
+            Senior engineers only. We work in your repositories, your cloud,
+            your process.
           </p>
-          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-5">
+        </div>
+      </div>
+
+      {/* Proof strip */}
+      <div className="border-t border-line bg-surface">
+        <div className="container-x flex flex-col gap-4 py-6 lg:flex-row lg:items-center lg:gap-10">
+          <p className="shrink-0 text-sm text-ink-faint">
+            Products built and operated by CLR3
+          </p>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:flex lg:flex-1 lg:justify-between">
             {products.map((p) => (
               <li key={p.domain}>
                 <a
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 text-ink-muted transition-colors hover:text-foreground"
+                  className="group inline-flex items-center gap-2 text-ink-muted transition-colors hover:text-ink"
                 >
-                  <ProductMark mark={p.mark} className="size-5 text-ink-faint transition-colors group-hover:text-signal" />
-                  <span className="text-[15px] font-medium tracking-[-0.01em]">
-                    {p.domain}
-                  </span>
+                  <ProductMark mark={p.mark} className="size-[18px] text-ink-faint transition-colors group-hover:text-signal" />
+                  <span className="text-[15px] font-medium tracking-[-0.01em]">{p.domain}</span>
                 </a>
               </li>
             ))}

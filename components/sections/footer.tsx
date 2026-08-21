@@ -16,16 +16,16 @@ export function Footer() {
           </div>
           <nav className="grid grid-cols-2 gap-8 md:col-span-7 md:grid-cols-3" aria-label="Footer">
             <div>
-              <h3 className="text-sm font-medium text-foreground">Company</h3>
+              <h3 className="text-sm font-semibold text-ink">Company</h3>
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
-                <li><a href="#services" className="transition-colors hover:text-foreground">Services</a></li>
-                <li><a href="#approach" className="transition-colors hover:text-foreground">Approach</a></li>
-                <li><Link href="/careers/backend-engineer" className="transition-colors hover:text-foreground">Careers</Link></li>
-                <li><a href="#contact" className="transition-colors hover:text-foreground">Contact</a></li>
+                <li><a href="#services" className="transition-colors hover:text-ink">Services</a></li>
+                <li><a href="#approach" className="transition-colors hover:text-ink">Approach</a></li>
+                <li><Link href="/careers/backend-engineer" className="transition-colors hover:text-ink">Careers</Link></li>
+                <li><a href="#contact" className="transition-colors hover:text-ink">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-foreground">Products</h3>
+              <h3 className="text-sm font-semibold text-ink">Products</h3>
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
                 {products.map((p) => (
                   <li key={p.domain}>
@@ -33,7 +33,7 @@ export function Footer() {
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors hover:text-foreground"
+                      className="transition-colors hover:text-ink"
                     >
                       {p.domain}
                     </a>
@@ -42,10 +42,10 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-foreground">Reach us</h3>
+              <h3 className="text-sm font-semibold text-ink">Reach us</h3>
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
                 <li>
-                  <a href={`mailto:${site.email}`} className="transition-colors hover:text-foreground">
+                  <a href={`mailto:${site.email}`} className="transition-colors hover:text-ink">
                     {site.email}
                   </a>
                 </li>
