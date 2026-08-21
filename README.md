@@ -19,7 +19,7 @@ CLR3 is a software consulting, advisory and product development company. This la
 - **Modern Design** - Flat enterprise system: solid surfaces, 1px rules, one accent, no gradients or shadows
 - **Responsive** - Optimized for all screen sizes
 - **Light, flat theme** - Dark band reserved for the contact section
-- **Contact Integration** - NeetoForm popup for inquiries
+- **Contact** - Native form that composes an email to hello@clr3.org, no third-party scripts
 - **Products** - Ledger-style list of products CLR3 builds and operates
 - **Performance** - Static site generation for optimal speed
 
@@ -30,7 +30,6 @@ CLR3 is a software consulting, advisory and product development company. This la
 - **Styling** - [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components** - [shadcn/ui](https://ui.shadcn.com/)
 - **Deployment** - GitHub Pages
-- **Form** - NeetoForm
 
 ## 📦 Installation
 
@@ -77,7 +76,7 @@ landing/
 │   ├── layout.tsx        # Root layout, metadata, NeetoForm scripts
 │   ├── page.tsx          # Landing page composition
 │   ├── globals.css       # Design tokens and global styles
-│   └── careers/          # Job postings
+│   └── careers/          # Careers index and job posts
 ├── components/
 │   ├── sections/         # Hero, Services, Products, Approach, Contact, Footer
 │   ├── site-nav.tsx      # Sticky navigation with mobile menu
@@ -111,7 +110,7 @@ export const products: Product[] = [
 ];
 ```
 
-Services, engagement phases and principles are edited in the same file. The contact form configuration is in `app/layout.tsx`.
+Services, engagement phases, principles and job posts (`jobs`) are edited in the same file. Each job needs a matching route under `app/careers/<slug>/`.
 
 ## 📄 License
 

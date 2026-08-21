@@ -20,7 +20,7 @@ export function Footer() {
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
                 <li><a href="#services" className="transition-colors hover:text-ink">Services</a></li>
                 <li><a href="#approach" className="transition-colors hover:text-ink">Approach</a></li>
-                <li><Link href="/careers/backend-engineer" className="transition-colors hover:text-ink">Careers</Link></li>
+                <li><Link href="/careers" className="transition-colors hover:text-ink">Careers</Link></li>
                 <li><a href="#contact" className="transition-colors hover:text-ink">Contact</a></li>
               </ul>
             </div>

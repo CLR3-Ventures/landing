@@ -13,7 +13,7 @@ export function Products() {
           <p className="mt-5 text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
             These are not side projects. Each one runs in production for
             paying customers, on infrastructure we own and operate. They are
-            the clearest evidence of how we work.
+            the best evidence of how we work.
           </p>
         </div>
 

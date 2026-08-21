@@ -22,8 +22,8 @@ export function Hero() {
             style={{ animationDelay: "100ms" }}
           >
             CLR3 is a software consulting, advisory and product development
-            company. We design, build and operate production systems for our
-            clients — and we run our own products on the same foundations.
+            company. We design, build and run production systems for our
+            clients, and we run our own products on the same foundations.
           </p>
           <div
             className="animate-rise mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Flat capability index — a table, not a card */}
+        {/* Flat capability index: a table, not a card */}
         <div
           className="animate-rise lg:col-span-4 lg:border-l lg:border-line lg:pl-10"
           style={{ animationDelay: "260ms" }}
@@ -60,8 +60,8 @@ export function Hero() {
             ))}
           </ul>
           <p className="mt-4 text-sm leading-relaxed text-ink-faint">
-            Senior engineers only. We work in your repositories, your cloud,
-            your process.
+            Senior engineers only. We work in your repositories, in your cloud
+            and with your process.
           </p>
         </div>
       </div>

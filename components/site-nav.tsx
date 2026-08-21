@@ -7,10 +7,10 @@ import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#products", label: "Products" },
-  { href: "#approach", label: "Approach" },
-  { href: "/careers/backend-engineer", label: "Careers" },
+  { href: "/#services", label: "Services" },
+  { href: "/#products", label: "Products" },
+  { href: "/#approach", label: "Approach" },
+  { href: "/careers", label: "Careers" },
 ];
 
 export function SiteNav() {
@@ -48,12 +48,12 @@ export function SiteNav() {
         </ul>
 
         <div className="hidden md:flex">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="inline-flex h-10 items-center bg-signal px-5 text-sm font-medium text-white transition-colors hover:bg-signal-strong"
           >
             Talk to us
-          </a>
+          </Link>
         </div>
 
         <button
@@ -80,13 +80,13 @@ export function SiteNav() {
               {l.label}
             </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="mt-4 mb-2 inline-flex h-12 items-center justify-center bg-signal px-4 text-base font-medium text-white"
           >
             Talk to us
-          </a>
+          </Link>
         </div>
       </div>
     </header>

@@ -5,8 +5,10 @@ export const site = {
   email: "hello@clr3.org",
   tagline: "Software consulting, advisory and product development.",
   description:
-    "CLR3 is a software consulting, advisory and product development company. We design, build and operate production systems for clients — and run our own products on the same foundations.",
+    "CLR3 is a software consulting, advisory and product development company. We design, build and run production systems for clients, and we run our own products on the same foundations.",
 };
+
+export const careersEmail = "careers@clr3.org";
 
 export type Product = {
   name: string;
@@ -25,7 +27,7 @@ export const products: Product[] = [
     url: "https://eeze.xyz",
     summary: "The AI checkout for SaaS.",
     detail:
-      "A conversational checkout that answers buyer questions from your own documentation, handles objections and guides the purchase — with server-side control over every offer and discount it can make.",
+      "A conversational checkout that answers buyer questions from your own docs, handles objections and walks people through to purchase. You keep full control of every offer and discount it is allowed to make.",
     tags: ["AI", "Commerce", "SaaS"],
     mark: "eeze",
   },
@@ -35,7 +37,7 @@ export const products: Product[] = [
     url: "https://nolimitnodes.com",
     summary: "Structured Solana events over gRPC.",
     detail:
-      "Low-latency Solana RPC with real-time decoded data streams — over a thousand typed program events across dozens of protocols, built for trading systems, market makers and searchers.",
+      "Low-latency Solana RPC with real-time decoded data streams. Over a thousand typed program events across dozens of protocols, built for trading systems, market makers and searchers.",
     tags: ["Solana", "gRPC", "Real-time"],
     mark: "nolimitnodes",
   },
@@ -45,7 +47,7 @@ export const products: Product[] = [
     url: "https://datastore.sh",
     summary: "Historical on-chain data as Parquet.",
     detail:
-      "Decoded instructions, events and state tables for Solana and Hyperliquid delivered as versioned, checksummed Parquet files. Query with your own tools — no API quotas, no indexer to maintain.",
+      "Decoded instructions, events and state tables for Solana and Hyperliquid, delivered as versioned Parquet files with checksums. Query them with your own tools. No API quotas and no indexer to maintain.",
     tags: ["Data", "Parquet", "Research"],
     mark: "datastore",
   },
@@ -55,7 +57,7 @@ export const products: Product[] = [
     url: "https://hyperliquidrpc.com",
     summary: "RPC, streams and archive for Hyperliquid.",
     detail:
-      "Low-latency JSON-RPC for HyperEVM and HyperCore, real-time gRPC streams of every trade, order and book update, and a searchable archive of Hyperliquid market history behind a single key.",
+      "Low-latency JSON-RPC for HyperEVM and HyperCore, real-time gRPC streams of every trade, order and book update, and a searchable archive of Hyperliquid market history. One API key for all of it.",
     tags: ["Hyperliquid", "RPC", "Market data"],
     mark: "hyperliquidrpc",
   },
@@ -65,7 +67,7 @@ export const products: Product[] = [
     url: "https://openinfra.sh",
     summary: "Compute with the Solana stack included.",
     detail:
-      "VPS, VDS and bare-metal servers with RPC, gRPC, WebSockets and ShredStream access bundled in — private networking, sub-millisecond latency and priority transaction routing on every plan.",
+      "VPS, VDS and bare-metal servers with RPC, gRPC, WebSockets and ShredStream access bundled in. Private networking, sub-millisecond latency and priority transaction routing on every plan.",
     tags: ["Infrastructure", "Bare metal", "Solana"],
     mark: "openinfra",
   },
@@ -81,9 +83,9 @@ export type Service = {
 export const services: Service[] = [
   {
     title: "Consulting",
-    lead: "Senior engineers embedded in your team, from architecture to production.",
+    lead: "Senior engineers working inside your team, from architecture to production.",
     body:
-      "We take on the hard, well-defined problems: systems that need to be faster, cheaper, more reliable or simply finished. We work inside your codebase and your process, and we leave it better documented than we found it.",
+      "We take on the hard, well-defined problems: systems that need to be faster, cheaper, more reliable, or simply finished. We work in your codebase and follow your process, and we leave things better documented than we found them.",
     engagements: [
       "Architecture and system design",
       "Distributed and event-driven systems",
@@ -95,7 +97,7 @@ export const services: Service[] = [
     title: "Advisory",
     lead: "Technical judgment for founders, boards and leadership teams.",
     body:
-      "Fractional CTO and advisory engagements for companies making decisions they can't easily undo — what to build, what to buy, who to hire, and when to rewrite. Direct opinions, backed by having operated the systems ourselves.",
+      "Fractional CTO and advisory work for companies facing decisions they can't easily undo. What to build, what to buy, who to hire, and when to rewrite. You get direct opinions from people who have run these systems themselves.",
     engagements: [
       "Fractional CTO and technical leadership",
       "Technical due diligence",
@@ -105,9 +107,9 @@ export const services: Service[] = [
   },
   {
     title: "Product development",
-    lead: "End-to-end delivery of software products, from first commit to operations.",
+    lead: "Complete software products, from the first commit to day-to-day operations.",
     body:
-      "We design, build and run complete products: APIs, data pipelines, real-time systems and the interfaces on top of them. The same team that builds it ships it, monitors it and owns it in production.",
+      "We design, build and run whole products: APIs, data pipelines, real-time systems and the interfaces on top of them. The team that builds it also ships it, monitors it and owns it in production.",
     engagements: [
       "Zero-to-one product builds",
       "Real-time data and streaming platforms",
@@ -121,29 +123,29 @@ export const approach = [
   {
     step: "Discover",
     title: "Understand the system before touching it",
-    body: "A short, intense diagnostic: code, infrastructure, data and the people running it. You get a written assessment and a plan with real estimates.",
+    body: "A short, focused look at your code, infrastructure, data and the people running it. You get a written assessment and a plan with honest estimates.",
   },
   {
     step: "Design",
-    title: "Decide what to build — and what not to",
-    body: "Architecture, interfaces and trade-offs agreed up front, in documents you keep. Boring technology where it works; new technology where it earns its place.",
+    title: "Decide what to build, and what not to",
+    body: "We agree on architecture, interfaces and trade-offs up front, in documents you keep. Boring technology where it works, new technology where it earns its place.",
   },
   {
     step: "Build",
     title: "Ship in weeks, in your repository",
-    body: "Small senior teams, continuous delivery, visible progress. No hand-off at the end because there is no separate 'delivery' team.",
+    body: "Small senior teams, continuous delivery, visible progress every week. There is no hand-off at the end because there is no separate delivery team.",
   },
   {
     step: "Operate",
     title: "Run it, measure it, improve it",
-    body: "Monitoring, on-call and cost discipline from day one. We operate our own products this way, and we bring the same habits to yours.",
+    body: "Monitoring, on-call and cost discipline from day one. We run our own products this way and we bring the same habits to yours.",
   },
 ];
 
 export const principles = [
   {
     title: "Operators, not just builders",
-    body: "Every product we list here is run by us, in production, for paying customers. Advice grounded in on-call hours, not slide decks.",
+    body: "Every product listed here is run by us, in production, for paying customers. Our advice comes from on-call hours, not slide decks.",
   },
   {
     title: "Senior by default",
@@ -151,10 +153,80 @@ export const principles = [
   },
   {
     title: "Performance is a feature",
-    body: "Much of our work lives in latency-sensitive, high-throughput systems. We measure everything and design for the p99.",
+    body: "Most of our work lives in latency-sensitive, high-throughput systems. We measure everything and design for the p99.",
   },
   {
     title: "Your code, your cloud, your IP",
     body: "We work in your repositories and your accounts. When the engagement ends, nothing is held hostage.",
+  },
+];
+
+export type Job = {
+  slug: string;
+  title: string;
+  location: string;
+  type: string;
+  team: string;
+  summary: string;
+  about: string[];
+  responsibilities: string[];
+  required: string[];
+  preferred: string[];
+  whoYouAre: string[];
+  process: string[];
+};
+
+export const jobs: Job[] = [
+  {
+    slug: "software-engineer-toronto",
+    title: "Software Engineer",
+    location: "Toronto, Canada",
+    type: "Full-time, hybrid",
+    team: "Engineering",
+    summary:
+      "Build and run the real-time data, infrastructure and AI products CLR3 operates in production, and ship client systems alongside a small senior team.",
+    about: [
+      "CLR3 is a software consulting, advisory and product development company. We build production systems for clients and we run our own products (eeze, NoLimitNodes, datastore, HyperliquidRPC and OpenInfra) on infrastructure we own and operate.",
+      "We are opening our Toronto engineering team. You will work directly with the founders and senior engineers on systems where latency, throughput and reliability matter: streaming pipelines, RPC infrastructure, data platforms and the products built on top of them.",
+    ],
+    responsibilities: [
+      "Design, build and ship backend services, APIs and data pipelines that run in production",
+      "Work on real-time, high-throughput systems: streaming, decoding, storage and query layers",
+      "Own what you build, including monitoring, on-call, performance and cost",
+      "Contribute to client engagements alongside senior CLR3 engineers",
+      "Take part in architecture decisions, code review and technical planning",
+      "Improve developer tooling, CI/CD and the reliability of our platforms",
+      "Write clear documentation and design notes that others can build on",
+    ],
+    required: [
+      "Strong programming skills in at least one backend language (Go, Rust, TypeScript, Python or similar) and a willingness to learn others",
+      "Experience building and running APIs and services in production",
+      "Working knowledge of databases, queues or streaming systems, and of testing",
+      "Solid fundamentals in data structures, concurrency and system design",
+      "Clear written and spoken communication, and comfort working directly with clients",
+      "Able to work from our Toronto office part of the week",
+    ],
+    preferred: [
+      "Experience with distributed, event-driven or low-latency systems",
+      "Familiarity with gRPC, Kafka, NATS or similar messaging systems",
+      "Experience with Solana, Hyperliquid or other blockchain data and infrastructure",
+      "Hands-on time with Kubernetes, bare-metal or cloud infrastructure, and observability tooling",
+      "Experience shipping AI-enabled product features",
+      "Open-source contributions or a technical blog",
+    ],
+    whoYouAre: [
+      "You like building things and seeing them run",
+      "You take ownership without waiting to be told",
+      "You care more about solving the problem than about which language you use",
+      "You ask questions early and share what you learn",
+      "You are comfortable being on call for the systems you build",
+    ],
+    process: [
+      "Intro call with an engineer, about 30 minutes",
+      "Short take-home assignment, scoped to around two hours",
+      "Technical conversation about your assignment and past work",
+      "Conversation with the founders",
+      "Offer",
+    ],
   },
 ];

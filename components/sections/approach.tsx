@@ -10,8 +10,8 @@ export function Approach() {
           </h2>
           <p className="mt-5 text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
             Four phases, the same whether we are advising, building for you or
-            building with you. The order matters: we don&rsquo;t write code
-            for a system we don&rsquo;t yet understand.
+            building with you. The order matters. We don&rsquo;t write code
+            for a system we don&rsquo;t understand yet.
           </p>
         </div>
 

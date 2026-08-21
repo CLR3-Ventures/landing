@@ -10,9 +10,9 @@ export function Services() {
               Three ways to work with us
             </h2>
             <p className="mt-5 text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
-              Most engagements start with one and grow into the others. Every
-              one of them is staffed by senior engineers who have shipped and
-              operated systems like yours.
+              Most engagements start with one and grow into the others. All of
+              them are staffed by senior engineers who have shipped and run
+              systems like yours.
             </p>
           </div>
 
