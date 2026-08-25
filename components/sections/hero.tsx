@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { products } from "@/lib/site";
 import { ProductMark } from "@/components/product-mark";
 
@@ -36,12 +37,12 @@ export function Hero() {
               Start a conversation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
-            <a
-              href="#products"
+            <Link
+              href="/products"
               className="inline-flex h-12 items-center justify-center border border-line-strong px-6 text-[15px] font-medium text-ink transition-colors hover:border-ink"
             >
               See what we operate
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -75,15 +76,13 @@ export function Hero() {
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:flex lg:flex-1 lg:justify-between">
             {products.map((p) => (
               <li key={p.domain}>
-                <a
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={`/products/${p.slug}`}
                   className="group inline-flex items-center gap-2 text-ink-muted transition-colors hover:text-ink"
                 >
                   <ProductMark mark={p.mark} className="size-[18px] text-ink-faint transition-colors group-hover:text-signal" />
                   <span className="text-[15px] font-medium tracking-[-0.01em]">{p.domain}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

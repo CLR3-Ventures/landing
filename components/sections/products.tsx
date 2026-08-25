@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { products } from "@/lib/site";
 import { ProductMark } from "@/components/product-mark";
 
@@ -20,10 +21,8 @@ export function Products() {
         <ul className="mt-14 border border-line bg-background">
           {products.map((p, i) => (
             <li key={p.domain} className={i > 0 ? "border-t border-line" : undefined}>
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/products/${p.slug}`}
                 className="group grid gap-5 px-5 py-7 transition-colors hover:bg-signal-soft sm:grid-cols-[48px_minmax(0,1fr)_auto] sm:gap-8 sm:px-8 sm:py-8 lg:grid-cols-[48px_260px_minmax(0,1fr)_auto]"
               >
                 <span className="flex size-11 items-center justify-center border border-line bg-surface text-ink-muted transition-colors group-hover:border-signal group-hover:text-signal sm:size-12">
@@ -53,10 +52,11 @@ export function Products() {
                   </ul>
                 </div>
 
-                <span className="hidden items-start text-ink-faint transition-colors group-hover:text-signal lg:flex">
-                  <ArrowUpRight className="size-5" />
+                <span className="hidden items-center gap-1.5 self-start text-[15px] font-medium text-ink-faint transition-colors group-hover:text-signal lg:inline-flex">
+                  Details
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -20,7 +20,7 @@ CLR3 is a software consulting, advisory and product development company. This la
 - **Responsive** - Optimized for all screen sizes
 - **Light, flat theme** - Dark band reserved for the contact section
 - **Contact** - Native form that composes an email to hello@clr3.org, no third-party scripts
-- **Products** - Ledger-style list of products CLR3 builds and operates
+- **Products** - Ledger on the home page plus a dedicated page per product, with researched copy, stats and facts
 - **Performance** - Static site generation for optimal speed
 
 ## 🛠️ Tech Stack
@@ -76,6 +76,7 @@ landing/
 │   ├── layout.tsx        # Root layout, metadata, NeetoForm scripts
 │   ├── page.tsx          # Landing page composition
 │   ├── globals.css       # Design tokens and global styles
+│   ├── products/         # Products index and one page per product
 │   └── careers/          # Careers index and job posts
 ├── components/
 │   ├── sections/         # Hero, Services, Products, Approach, Contact, Footer

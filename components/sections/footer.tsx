@@ -18,10 +18,10 @@ export function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-ink">Company</h3>
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
-                <li><a href="#services" className="transition-colors hover:text-ink">Services</a></li>
-                <li><a href="#approach" className="transition-colors hover:text-ink">Approach</a></li>
+                <li><Link href="/#services" className="transition-colors hover:text-ink">Services</Link></li>
+                <li><Link href="/#approach" className="transition-colors hover:text-ink">Approach</Link></li>
                 <li><Link href="/careers" className="transition-colors hover:text-ink">Careers</Link></li>
-                <li><a href="#contact" className="transition-colors hover:text-ink">Contact</a></li>
+                <li><Link href="/#contact" className="transition-colors hover:text-ink">Contact</Link></li>
               </ul>
             </div>
             <div>
@@ -29,14 +29,9 @@ export function Footer() {
               <ul className="mt-3 space-y-2 text-sm text-ink-muted">
                 {products.map((p) => (
                   <li key={p.domain}>
-                    <a
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition-colors hover:text-ink"
-                    >
-                      {p.domain}
-                    </a>
+                    <Link href={`/products/${p.slug}`} className="transition-colors hover:text-ink">
+                      {p.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
