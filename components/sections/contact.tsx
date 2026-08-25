@@ -28,16 +28,13 @@ export function Contact() {
               <div className="grid gap-1 py-4 sm:grid-cols-[120px_1fr]">
                 <dt className="text-sm text-band-muted">Careers</dt>
                 <dd>
-                  {jobs.map((j) => (
-                    <Link
-                      key={j.slug}
-                      href={`/careers/${j.slug}`}
-                      className="group inline-flex items-center gap-1.5 text-[15px] font-medium underline-offset-4 hover:underline"
-                    >
-                      {j.title}, {j.location.split(",")[0]}
-                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
-                  ))}
+                  <Link
+                    href="/careers"
+                    className="group inline-flex items-center gap-1.5 text-[15px] font-medium underline-offset-4 hover:underline"
+                  >
+                    {jobs.length} open roles
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
                 </dd>
               </div>
             </dl>

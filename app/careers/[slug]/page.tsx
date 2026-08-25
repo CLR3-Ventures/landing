@@ -5,16 +5,24 @@ import { SiteNav } from "@/components/site-nav";
 import { Footer } from "@/components/sections/footer";
 import { careersEmail, jobs } from "@/lib/site";
 
-const job = jobs.find((j) => j.slug === "software-engineer-toronto")!;
+export const dynamicParams = false;
 
-export const metadata: Metadata = {
-  title: `${job.title}, ${job.location}`,
-  description: job.summary,
-};
+export function generateStaticParams() {
+  return jobs.map((j) => ({ slug: j.slug }));
+}
 
-const applyHref = `mailto:${careersEmail}?subject=${encodeURIComponent(
-  `Application: ${job.title}, ${job.location.split(",")[0]}`
-)}`;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const job = jobs.find((j) => j.slug === slug)!;
+  return {
+    title: `${job.title}, ${job.location}`,
+    description: job.summary,
+  };
+}
 
 function List({ items }: { items: string[] }) {
   return (
@@ -37,7 +45,16 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-export default function JobPage() {
+export default async function JobPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const job = jobs.find((j) => j.slug === slug)!;
+  const applyHref = `mailto:${careersEmail}?subject=${encodeURIComponent(
+    `Application: ${job.title}, ${job.location.split(",")[0]}`
+  )}`;
   return (
     <>
       <SiteNav />
