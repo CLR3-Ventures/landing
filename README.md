@@ -12,7 +12,7 @@
 
 ## 🚀 About
 
-CLR3 is a software consulting, advisory and product development company. This landing page presents our services, the products we build and operate (eeze.xyz, nolimitnodes.com, datastore.sh, hyperliquidrpc.com, openinfra.sh), how an engagement runs, and a contact point.
+CLR3 is a software consulting, advisory and product development company. This landing page presents our services, the products we build and operate (eeze.xyz, nolimitnodes.com, datastore.sh, hyperliquidrpc.com, openinfra.sh, robinhoodrpc.io, swqos.com), how an engagement runs, and a contact point.
 
 ## ✨ Features
 

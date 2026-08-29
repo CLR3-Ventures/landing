@@ -20,7 +20,7 @@ export type Product = {
   summary: string;
   detail: string;
   tags: string[];
-  mark: "eeze" | "nolimitnodes" | "datastore" | "hyperliquidrpc" | "openinfra";
+  mark: "eeze" | "nolimitnodes" | "datastore" | "hyperliquidrpc" | "openinfra" | "robinhoodrpc" | "swqos";
   /* Detail page content. Facts and claims below come from each product's own site. */
   headline: string;
   intro: string[];
@@ -382,6 +382,149 @@ export const products: Product[] = [
       ],
     },
   },
+  {
+    slug: "robinhoodrpc",
+    name: "RobinhoodRPC",
+    domain: "robinhoodrpc.io",
+    url: "https://robinhoodrpc.io",
+    docsUrl: "https://robinhoodrpc.io/docs/quickstart",
+    category: "Robinhood Chain infrastructure",
+    summary: "Robinhood Chain RPC, the consolidated tape, and portfolio data that is correct.",
+    detail:
+      "Full JSON-RPC with tracing and simulation for Robinhood Chain, a real-time consolidated tape across six venues, and balances for tokenized equities that survive a stock split. One key for RPC, streams and history.",
+    tags: ["Robinhood Chain", "RPC", "Tokenized equities"],
+    mark: "robinhoodrpc",
+    headline: "Robinhood Chain RPC, the consolidated tape, and portfolio data that is correct.",
+    intro: [
+      "Robinhood Chain moves tokenized equities at 100ms block times, and equities carry baggage that crypto tokens do not: splits, dividends, reverse splits and a dozen other corporate actions that change what a balance means. Most infrastructure ignores that and quietly reports numbers that are wrong by hundreds of percent after a split.",
+      "RobinhoodRPC is built around getting that right. Full JSON-RPC with tracing and simulation, a consolidated tape across six venues, and a portfolio layer that applies the multiplier that was true at the block, not the one that is true today.",
+    ],
+    stats: [
+      { value: "4.2ms", label: "median reads, measured and published hourly" },
+      { value: "200+", label: "tokenized equities with typed corporate actions" },
+      { value: "6", label: "venues in the consolidated tape" },
+    ],
+    facts: [
+      { label: "Category", value: "Robinhood Chain RPC, streams and history" },
+      { label: "Network", value: "Robinhood Chain (chain ID 4663), mainnet and testnet" },
+      { label: "Interfaces", value: "JSON-RPC, gRPC and gRPC-Web, REST, GraphQL, webhooks" },
+      { label: "Sinks", value: "Kafka, Postgres, ClickHouse and S3 on Scale" },
+      { label: "SLA", value: "99.9% Build, 99.99% Scale, with automatic credits" },
+      { label: "Pricing", value: "From $50/mo, half price for the first month" },
+    ],
+    features: [
+      {
+        title: "Complete JSON-RPC",
+        body: "Standard eth, net, web3 and txpool methods plus debug and trace, with transaction simulation. QuickNode-compatible, so existing tooling and migration guides work as-is.",
+      },
+      {
+        title: "Balances that survive a split",
+        body: "Historical balances and profit and loss use the multiplier in effect at that block. Competitors that use today's multiplier can report a 300 percent error on the same position.",
+      },
+      {
+        title: "Consolidated tape",
+        body: "Trades, orders and book updates across six venues, delivered in well under a second, with every tick at top of book.",
+      },
+      {
+        title: "Typed corporate actions",
+        body: "Thirteen corporate action types across 200 plus stock tokens, reconciled hourly, so a split or dividend shows up as structured data rather than a surprise.",
+      },
+      {
+        title: "Streams and sinks",
+        body: "gRPC and gRPC-Web streaming with six-hour replay, and on the Scale plan direct sinks into Kafka, Postgres, ClickHouse or S3.",
+      },
+      {
+        title: "A deep archive",
+        body: "Over 1.65 billion order events, a billion book updates and 14 million trades, plus complete funding, liquidation and TWAP history.",
+      },
+    ],
+    audience: [
+      "Quant and HFT teams trading tokenized equities",
+      "Market makers on Robinhood Chain",
+      "Copy-trading and portfolio products",
+      "Data applications that need corporate actions handled correctly",
+    ],
+    included: {
+      title: "Plans",
+      items: [
+        "Build, $50/mo: 250 req/s, 90-day history, 10 webhooks, simulation, consolidated tape, REST and GraphQL",
+        "Scale, $200/mo: 1,000 req/s, full history, gRPC streaming, database sinks, sequencer feed states",
+        "Dedicated nodes and enterprise terms on request; annual billing saves 17 percent",
+      ],
+    },
+    note: "RobinhoodRPC is an independent infrastructure provider. It is not affiliated with, endorsed by, or sponsored by Robinhood Markets, Inc. Robinhood Chain is a public permissionless network.",
+  },
+  {
+    slug: "swqos",
+    name: "swqos",
+    domain: "swqos.com",
+    url: "https://swqos.com",
+    docsUrl: "https://swqos.com/docs/quickstart",
+    category: "Solana transaction relay",
+    summary: "The fastest way to land a transaction on Solana.",
+    detail:
+      "A prepaid relay that forwards your signed Solana transactions straight to the current leader over stake-weighted QoS connections that are already open. No keys, no modification, no RPC in the hot path. Pay 0.0002 SOL per accepted send.",
+    tags: ["Solana", "SWQoS", "Transaction relay"],
+    mark: "swqos",
+    headline: "The fastest way to land a transaction on Solana.",
+    intro: [
+      "On Solana, whether your transaction lands often comes down to how it reaches the leader. Stake-weighted quality of service gives staked connections priority, and keeping those connections open removes the handshake and TCP slow start that cost you on every send.",
+      "swqos is that path, and only that path. You sign locally, hand over the bytes, and they go unchanged over persistent QUIC connections to the leader. There is no blockhash fetch, no simulation and no status polling in between. You keep control of the transaction; swqos is a route, not a middleman.",
+    ],
+    stats: [
+      { value: "0", label: "RPC calls in the hot path" },
+      { value: "0.0002 SOL", label: "per accepted send, refusals cost nothing" },
+      { value: "90s", label: "dedupe window, resent signatures are free" },
+    ],
+    facts: [
+      { label: "Category", value: "Stake-weighted Solana transaction relay" },
+      { label: "Endpoints", value: "send.swqos.com:11000 over QUIC, or HTTPS POST /v1/transactions" },
+      { label: "Custody", value: "None. You sign locally, swqos never sees a key" },
+      { label: "Payload", value: "Up to 1,232 bytes, forwarded unmodified" },
+      { label: "Billing", value: "Prepaid SOL balance, no cards or subscriptions" },
+    ],
+    features: [
+      {
+        title: "Zero hops to the leader",
+        body: "Transactions go from the relay directly to the current leader over staked connections, bypassing the general RPC layer and its queues entirely.",
+      },
+      {
+        title: "Connections already warm",
+        body: "Staked QUIC connections are opened at startup and kept alive, with round-robin and retry across them, so no send pays for a handshake.",
+      },
+      {
+        title: "Nothing in the hot path",
+        body: "No blockhash fetching, no simulation, no status checks. The relay does one job: get your bytes to the leader as fast as physics allows.",
+      },
+      {
+        title: "Two ways to send",
+        body: "HTTPS for the simplest integration, a single JSON POST per transaction. QUIC for the fastest, one persistent connection with authentication only at the handshake.",
+      },
+      {
+        title: "Honest accounting",
+        body: "You pay 0.0002 SOL for each accepted send. Refused submissions cost nothing, and a duplicate signature within 90 seconds is free.",
+      },
+      {
+        title: "You stay in control",
+        body: "swqos never holds keys and never edits a transaction. A receipt means the bytes were forwarded and the upstream acknowledged the stream.",
+      },
+    ],
+    audience: [
+      "Trading bots where landing rate is the strategy",
+      "Market makers and arbitrage systems",
+      "Wallets and apps that already build their own transaction flow",
+      "Teams that want a relay without a subscription",
+    ],
+    included: {
+      title: "How it works",
+      items: [
+        "Top up a prepaid balance in SOL and get your credentials",
+        "Build and sign the transaction locally, exactly as you do today",
+        "POST the serialized bytes over HTTPS, or stream them over QUIC, and confirm landing with your own RPC",
+      ],
+    },
+    note: "A receipt from swqos means the transaction was forwarded and acknowledged upstream. Inclusion in a block is the network's decision, so confirm landing separately through your own RPC.",
+  },
 ];
 
 export type Service = {
@@ -497,7 +640,7 @@ export const jobs: Job[] = [
     summary:
       "Build and run the real-time data, infrastructure and AI products CLR3 operates in production, and ship client systems alongside a small senior team.",
     about: [
-      "CLR3 is a software consulting, advisory and product development company. We build production systems for clients and we run our own products (eeze, NoLimitNodes, datastore, HyperliquidRPC and OpenInfra) on infrastructure we own and operate.",
+      "CLR3 is a software consulting, advisory and product development company. We build production systems for clients and we run our own products (eeze, NoLimitNodes, datastore, HyperliquidRPC, OpenInfra, RobinhoodRPC and swqos) on infrastructure we own and operate.",
       "We are growing our Toronto engineering team. You will work directly with the founders and senior engineers on systems where latency, throughput and reliability matter: streaming pipelines, RPC infrastructure, data platforms and the products built on top of them.",
     ],
     responsibilities: [
@@ -799,14 +942,14 @@ export const jobs: Job[] = [
     type: "Full-time, hybrid",
     team: "Product",
     summary:
-      "Design developer-facing products where clarity is the brand: consoles, checkouts, docs and dashboards across five live products.",
+      "Design developer-facing products where clarity is the brand: consoles, checkouts, docs and dashboards across seven live products.",
     about: [
-      "Our customers are engineers, traders and founders. They do not want delight, they want to find the number, trust it and get back to work. Designing for that audience is a discipline of its own, and right now it is spread across five products that each deserve better than developer-drawn interfaces.",
-      "You will be our first dedicated designer, working across eeze, NoLimitNodes, datastore, HyperliquidRPC and OpenInfra, plus the CLR3 site itself. You will set the design system and the standard.",
+      "Our customers are engineers, traders and founders. They do not want delight, they want to find the number, trust it and get back to work. Designing for that audience is a discipline of its own, and right now it is spread across seven products that each deserve better than developer-drawn interfaces.",
+      "You will be our first dedicated designer, working across all seven CLR3 products, plus the CLR3 site itself. You will set the design system and the standard.",
     ],
     responsibilities: [
       "Own end-to-end design for product surfaces: flows, wireframes, final UI",
-      "Build and maintain a design system that five products can share",
+      "Build and maintain a design system that seven products can share",
       "Design data-dense screens, like stream catalogues, latency dashboards and dataset browsers, that stay scannable",
       "Work directly with engineers and ship alongside them, not ahead of them",
       "Talk to customers and turn what you hear into concrete design changes",

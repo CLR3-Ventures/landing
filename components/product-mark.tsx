@@ -60,6 +60,21 @@ export function ProductMark({
           <path d="M3 20h18" />
         </svg>
       );
+    case "robinhoodrpc":
+      // ticker tape / feathered arrow: consolidated tape
+      return (
+        <svg {...common}>
+          <path d="M3 8h18M3 12h12M3 16h18" />
+          <path d="M18 10l3 2-3 2" />
+        </svg>
+      );
+    case "swqos":
+      // relay: bolt to a leader node
+      return (
+        <svg {...common}>
+          <path d="M12 3L6 13h5l-1 8 6-10h-5z" />
+        </svg>
+      );
     case "openinfra":
       // server rack
       return (

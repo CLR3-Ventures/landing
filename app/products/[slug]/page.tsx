@@ -218,7 +218,7 @@ export default async function ProductPage({
         <section className="py-16 sm:py-20" aria-label="Other CLR3 products">
           <div className="container-x">
             <h2 className="text-sm font-semibold text-ink">More from CLR3</h2>
-            <ul className="mt-4 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-4">
+            <ul className="mt-4 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-3">
               {others.map((o) => (
                 <li key={o.slug} className="border-r border-b border-line">
                   <Link

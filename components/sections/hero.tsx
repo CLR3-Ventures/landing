@@ -73,7 +73,7 @@ export function Hero() {
           <p className="shrink-0 text-sm text-ink-faint">
             Products built and operated by CLR3
           </p>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:flex lg:flex-1 lg:justify-between">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:flex lg:flex-1 lg:flex-wrap lg:gap-x-8 lg:gap-y-2">
             {products.map((p) => (
               <li key={p.domain}>
                 <Link

@@ -9,7 +9,7 @@ import { products } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "The products CLR3 builds and operates: eeze, NoLimitNodes, datastore, HyperliquidRPC and OpenInfra.",
+    "The products CLR3 builds and operates: eeze, NoLimitNodes, datastore, HyperliquidRPC, OpenInfra, RobinhoodRPC and swqos.",
 };
 
 export default function ProductsIndexPage() {
@@ -24,7 +24,7 @@ export default function ProductsIndexPage() {
                 Products we build and operate
               </h1>
               <p className="mt-7 text-pretty text-lg leading-relaxed text-ink-muted sm:text-xl">
-                Five products, all running in production for paying customers,
+                Seven products, all running in production for paying customers,
                 on infrastructure we own. They are how we stay honest: every
                 piece of advice we give a client is something we also have to
                 live with ourselves.
