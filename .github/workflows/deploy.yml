@@ -21,20 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: npm
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build with Next.js
-        run: npm run build
+      # SITE TAKEN DOWN. Revert this commit to restore the full build.
+      - name: Write holding page
+        run: |
+          rm -rf out && mkdir -p out
+          cp public/CNAME public/.nojekyll out/
+          cat > out/index.html <<'HTML'
+          <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>CLR3</title></head><body></body></html>
+          HTML
+          cp out/index.html out/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
